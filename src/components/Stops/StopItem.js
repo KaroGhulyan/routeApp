@@ -41,20 +41,22 @@ function StopItem({ stop, stops, index }) {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     if(isFinished){
       setFinished(true)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-
   }, [stop])
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (selected) {
       setColor('#E90052');
     }
     if (finished) {
       setColor('#4688F1');
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
 
   }, [selected, finished]);
   return (
