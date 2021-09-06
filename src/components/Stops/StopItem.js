@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { routes,currentStop, selectCurrentStop, finishedCount } from '../../features/appSlice';
+import { useDispatch } from 'react-redux';
+import { routes,currentStop, finishedCount } from '../../features/appSlice';
 import {
   Stop,
   StopNumber,

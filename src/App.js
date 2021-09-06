@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { routes } from './features/appSlice';
 import { fetchRoutes } from './features/routesAPI';
@@ -20,8 +20,9 @@ function App() {
     const response = await fetchRoutes();
     dispatch(routes(response.stops));
   };
-  React.useEffect(() => {
+  useEffect(() => {
     getData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

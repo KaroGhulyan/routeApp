@@ -8,7 +8,7 @@ import {
 } from 'react-leaflet';
 import { useSelector } from 'react-redux';
 import L from 'leaflet';
-import { selectCurrentStop, selectRoutes } from '../../features/appSlice';
+import {selectRoutes } from '../../features/appSlice';
 import RedIcon from "../../assets/red.svg"
 import BlueIcon from '../../assets/blue.svg'
 
