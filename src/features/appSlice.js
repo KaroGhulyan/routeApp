@@ -13,7 +13,6 @@ export const appSlice = createSlice({
       state.routes = action.payload;
     },
     currentStop: (state, action) => {
-      console.log(action.payload);
       state.currentStop = action.payload;
     },
     finishedCount: (state, action) => {

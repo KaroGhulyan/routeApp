@@ -29,23 +29,28 @@ export const Stop = styled.div`
   span {
     font-size: 16px;
     font-weight: normal;
-    color: #282828;
+    color: ${(props) => (props.finished ? '#DEDEDE' : '#282828')};
     max-width: 218px;
   }
   p {
     font-size: 14px;
-    color: #9b9b9b;
+    color: ${(props) => (props.finished ? '#DEDEDE' : '#9b9b9b')};
   }
-  /* color: '#282828'; */
 `;
 export const StopWrapper = styled.div`
-  background-color: ${(props) => (props.selected ? 'white' : '#e5e8e9')};
+  background-color: ${(props) => (props.finished ? 'unset' : 'white')};
   border-radius: 2px;
+  box-shadow: ${(props) =>
+    props.finished
+      ? 'unset'
+      : '0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)'};
   padding: 12px 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   max-width: 360px;
+  background-color: '#fffff';
+  opacity: ${(props) => (props.selected ? '1' : '0.7')};
   width: 100%;
   margin: 8px;
   &:hover {

@@ -7,7 +7,6 @@ import Map from './components/Map/Map';
 import Stops from './components/Stops/Stops';
 import { Wrapper, Main } from './style';
 import { useDispatch } from 'react-redux';
-import data from './features/data.json'
 
 function App() {
   const [value, setValue] = useState(0);
@@ -18,7 +17,8 @@ function App() {
   };
 
   useEffect(async () => {
-    dispatch(routes(data.stops));
+    const response = await fetchRoutes()
+    dispatch(routes(response.stops));
   }, []);
 
   return (

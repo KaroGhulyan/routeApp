@@ -55,8 +55,8 @@ function StopItem({ stop, stops, index }) {
     }
   }, [selected, finished]);
   return (
-    <StopWrapper selected={selected}>
-      <Stop onClick={handleClick}>
+    <StopWrapper selected={selected} finished={finished}>
+      <Stop onClick={handleClick} finished={finished}>
         <StopInfo>
           <StopNumber selected={selected || finished ? color : ''}>
             {finished ? (
