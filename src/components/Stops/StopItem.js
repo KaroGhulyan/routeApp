@@ -44,6 +44,8 @@ function StopItem({ stop, stops, index }) {
     if(isFinished){
       setFinished(true)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [stop])
   useEffect(() => {
     if (selected) {
@@ -52,6 +54,8 @@ function StopItem({ stop, stops, index }) {
     if (finished) {
       setColor('#4688F1');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [selected, finished]);
   return (
     <StopWrapper selected={selected} finished={finished}>
