@@ -27,7 +27,6 @@ function StopItem({ stop, stops, index }) {
   const [color, setColor] = useState('');
   const dispatch = useDispatch();
   
-  const doneStop = useSelector(selectCurrentStop)
 
   const handleClick = () => {
     !finished && setSelected(!selected);
@@ -45,7 +44,7 @@ function StopItem({ stop, stops, index }) {
     if(isFinished){
       setFinished(true)
     }
-  }, [])
+  }, [stop])
   useEffect(() => {
     if (selected) {
       setColor('#E90052');

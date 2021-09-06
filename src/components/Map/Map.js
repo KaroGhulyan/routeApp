@@ -25,7 +25,6 @@ function Map() {
     iconAnchor: [12.5, 41],
     popupAnchor: [0, -41],
   });
-  const { address } = useSelector(selectCurrentStop);
   const stops = useSelector(selectRoutes);
   const [stopsData, setStopsData] = useState([]);
 

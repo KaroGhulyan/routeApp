@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import './App.css';
 import { routes } from './features/appSlice';
 import { fetchRoutes } from './features/routesAPI';
@@ -20,7 +20,7 @@ function App() {
     const response = await fetchRoutes();
     dispatch(routes(response.stops));
   };
-  useEffect(() => {
+  React.useEffect(() => {
     getData()
   }, []);
 
