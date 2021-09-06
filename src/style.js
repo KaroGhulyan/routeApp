@@ -67,6 +67,7 @@ export const FinishSection = styled.div`
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+  margin-top: 11px;
 
   div {
     display: flex;
