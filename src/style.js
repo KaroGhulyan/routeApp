@@ -68,15 +68,20 @@ export const FinishSection = styled.div`
   justify-content: flex-end;
   cursor: pointer;
   margin-top: 11px;
+  border-top: 1px solid #DEDEDE;
+  padding-top:11px;
+  span {
+    display: block;
+    color: 'red !important';
+    text-transform: uppercase;
+    font-size: 10px;
+  }
 
   div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    & p {
-      color: '#4688f1';
-    }
   }
 `;
 export const FinishIcon = styled(DoneIcon)`

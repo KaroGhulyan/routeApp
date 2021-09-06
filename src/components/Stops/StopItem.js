@@ -15,7 +15,6 @@ import {
 function StopItem({ stop, stops, index }) {
   const {
     information,
-    sequence_number,
     arr_time_string,
     end_time_string,
     time_window_earliest,
@@ -89,7 +88,7 @@ function StopItem({ stop, stops, index }) {
         <FinishSection onClick={endRoute}>
           <div>
             <FinishIcon />
-            <p>Finish</p>
+            <span>Finish</span>
           </div>
         </FinishSection>
       )}
