@@ -16,9 +16,12 @@ function App() {
     setValue(value);
   };
 
-  useEffect(async () => {
-    const response = await fetchRoutes()
+  const getData = async () => {
+    const response = await fetchRoutes();
     dispatch(routes(response.stops));
+  };
+  useEffect(() => {
+    getData()
   }, []);
 
   return (
