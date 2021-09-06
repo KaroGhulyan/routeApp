@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { routes,currentStop, finishedCount } from '../../features/appSlice';
+import { routes, currentStop, finishedCount } from '../../features/appSlice';
 import {
   Stop,
   StopNumber,
@@ -20,13 +20,12 @@ function StopItem({ stop, stops, index }) {
     end_time_string,
     time_window_earliest,
     time_window_latest,
-    isFinished
+    isFinished,
   } = stop;
   const [selected, setSelected] = useState(false);
   const [finished, setFinished] = useState(false);
   const [color, setColor] = useState('');
   const dispatch = useDispatch();
-  
 
   const handleClick = () => {
     !finished && setSelected(!selected);
@@ -34,8 +33,8 @@ function StopItem({ stop, stops, index }) {
   const endRoute = () => {
     let routesData = JSON.parse(JSON.stringify([...stops]));
     routesData[index].isFinished = true;
-    dispatch(finishedCount())
-    dispatch(routes(routesData))
+    dispatch(finishedCount());
+    dispatch(routes(routesData));
     dispatch(currentStop(stop));
     setFinished(true);
   };
@@ -43,11 +42,11 @@ function StopItem({ stop, stops, index }) {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
 
-    if(isFinished){
-      setFinished(true)
+    if (isFinished) {
+      setFinished(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stop])
+  }, [stop]);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     if (selected) {
@@ -57,7 +56,6 @@ function StopItem({ stop, stops, index }) {
       setColor('#4688F1');
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-
   }, [selected, finished]);
   return (
     <StopWrapper selected={selected} finished={finished}>
@@ -67,7 +65,7 @@ function StopItem({ stop, stops, index }) {
             {finished ? (
               <FinishIcon finished={finished && 'white'} />
             ) : (
-              sequence_number
+              index + 1
             )}
           </StopNumber>
           <Address>

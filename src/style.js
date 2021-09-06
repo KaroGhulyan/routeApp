@@ -31,8 +31,10 @@ export const Stop = styled.div`
     font-weight: normal;
     color: ${(props) => (props.finished ? '#DEDEDE' : '#282828')};
     max-width: 218px;
+    margin-top: 5px;
   }
   p {
+    margin-top: 5px;
     font-size: 14px;
     color: ${(props) => (props.finished ? '#DEDEDE' : '#9b9b9b')};
   }
